@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button style="font-size: 20px;" id="button">创建火币连接</button>
+  <script src="pako.js"></script>
+  <script src="fireCoinWs.js"></script>
+  <script>
+    const btn = document.getElementById('button')
+    btn.onclick = function () {
+      window.FireCoinWs.initFireCoinWs()
+      window.FireCoinWs.subscriptionDepth({ coinName: 'btcusdt' })
+    }
+  </script>
+</body>
+</html>
